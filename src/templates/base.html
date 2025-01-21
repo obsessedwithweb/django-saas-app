@@ -1,15 +1,21 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    {% block css %}
-    {% endblock  %}
-    <title>SaaS</title>
-</head>
-<body>
-    {% block content %}
-    {% endblock %}
 
-</body>
+    <head>
+        <meta charset="UTF-8">
+        {% include "includes/css.html" %}
+        {% block css %}
+        {% endblock  %}
+        <title>SaaS</title>
+    </head>
+    
+    <body>
+        {% include "includes/nav.html" %}
+        {% block content %}
+        {% endblock %}
+        {% include "includes/js.html" %}
+        
+    </body>
+
 </html>

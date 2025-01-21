@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>After Adding, Welcome !</h1>
+<section class="flex flex-col items-center justify-center ">
+    <h1 class="" >Before Adding, Welcome !</h1>
     <ul>
         {% for q in visits %}
             <li>{{ q.timestamp }} => {{q.path}} </li>
         {% endfor %}
     </ul>
+</section>
 {% endblock  %}
