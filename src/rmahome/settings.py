@@ -28,6 +28,7 @@ if DEBUG:
 
 INSTALLED_APPS = [
     'visits',
+    'commando',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -129,8 +130,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
-# STATICFILES_DIRS = []
-# STATIC_ROOT
+STATICFILES_VENDOR_DIR = BASE_DIR / "static" / "flowbite"
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
+STATIC_ROOT = BASE_DIR / "local-cdn"
 
 
 # Default primary key field type
