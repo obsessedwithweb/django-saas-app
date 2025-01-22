@@ -81,7 +81,7 @@ DATABASES = {
 }
 # CONN_MAX_AGE = config('CONN_MAX_AGE')
 # Add default=None if u want to run it locally
-DATABASE_URL = config('DATABASE_URL', cast=str)
+DATABASE_URL = config('DATABASE_URL', default=None)
 
 if DATABASE_URL is not None:
     import dj_database_url
