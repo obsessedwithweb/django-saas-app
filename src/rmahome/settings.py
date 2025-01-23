@@ -130,19 +130,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STORAGES = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
-
 STATIC_URL = 'static/'
 STATICFILES_VENDOR_DIR = BASE_DIR / "static" / "flowbite"
+(BASE_DIR / "static").mkdir(exist_ok=True, parents=True)
 STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
 STATIC_ROOT = BASE_DIR / "local-cdn"
 
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
