@@ -4,6 +4,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .idea/
+crap.json
 # C extensions
 *.so
 # Distribution / packaging
