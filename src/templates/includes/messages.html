@@ -1,0 +1,8 @@
+{% if messages %}
+    {% for message in messages %}
+        <div role="alert"
+            class="bg-blue-500 p-4 shadow-sm border-solid border-black text-sm md:text-base alert alert-{{message.tags}}">
+            <span><strong>{{ message|title }}</strong></span>
+        </div>
+    {% endfor %}
+{% endif %}

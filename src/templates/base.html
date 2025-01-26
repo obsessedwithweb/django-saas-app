@@ -12,6 +12,7 @@
     
     <body>
         {% include "includes/nav.html" %}
+        {% include "includes/messages.html" with messages=messages%}
         {% block content %}
         {% endblock %}
         {% include "includes/js.html" %}
