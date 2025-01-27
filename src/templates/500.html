@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="text-center px-4">
+      <div class="mb-8">
+        <svg class="mx-auto w-64 h-64" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+          <path d="M250 0C111.93 0 0 111.93 0 250s111.93 250 250 250 250-111.93 250-250S388.07 0 250 0zm0 450c-110.46 0-200-89.54-200-200s89.54-200 200-200 200 89.54 200 200-89.54 200-200 200z" fill="#4B5563"/>
+          <path d="M250 150c-11.05 0-20 8.95-20 20s8.95 20 20 20 20-8.95 20-20-8.95-20-20-20zm0 160c-11.05 0-20-8.95-20-20v-60c0-11.05 8.95-20 20-20s20 8.95 20 20v60c0 11.05-8.95 20-20 20z" fill="#EF4444"/>
+        </svg>
+      </div>
+      <h1 class="text-6xl font-bold text-gray-800 mb-4">500</h1>
+      <h2 class="text-2xl font-semibold text-gray-600 mb-6">Server Error</h2>
+      <p class="text-gray-500 mb-8">Oops! Something went wrong on our servers. We're working to fix it.</p>
+      <a href="/" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+        Return Home
+      </a>
+    </div>
+  </div>
+
+{% endblock content %}
