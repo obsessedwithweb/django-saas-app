@@ -46,6 +46,8 @@ if DEBUG:
         '127.0.0.1'
     ]
 
+CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -57,7 +59,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    # "allauth.socialaccount.providers.github",
     "widget_tweaks",
     "slippers",
 
@@ -68,9 +69,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.github',
-    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -168,7 +167,11 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 
-SOCIALACCOUNT_PROVIDERS = {}
+SOCIALACCOUNT_PROVIDERS = {
+    "github": {
+        "VERIFIED_EMAIL": True
+    }
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
