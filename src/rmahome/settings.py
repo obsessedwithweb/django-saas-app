@@ -185,7 +185,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_VENDOR_DIR = BASE_DIR / "static" / "flowbite"
 
 STATICFILES_DIRS = [
@@ -198,14 +198,14 @@ STATIC_ROOT = BASE_DIR / "local-cdn"
 
 ALLAUTH_UI_THEME = "light"
 
-STORAGES = {
-    "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
-    },
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+# STORAGES = {
+#     # "default": {
+#     #     "BACKEND": "django.core.files.storage.FileSystemStorage",
+#     # },
+#     # "staticfiles": {
+#     #     "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+#     # },
+# }
 
 WHITENOISE_MANIFEST_STRICT = False
 
