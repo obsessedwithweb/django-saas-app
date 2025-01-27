@@ -35,7 +35,7 @@ SECRET_KEY = config("DJANGO_SECRET_KEY")
 DEBUG = config("DJANGO_DEBUG", cast=bool)
 
 ALLOWED_HOSTS = [
-    '.railway.app'
+    'https://django-saas.up.railway.app/',
 ]
 
 CSRF_COOKIE_DOMAIN = ALLOWED_HOSTS[0]
