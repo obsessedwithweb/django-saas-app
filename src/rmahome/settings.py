@@ -196,11 +196,11 @@ STATIC_ROOT = BASE_DIR / "local-cdn"
 
 ALLAUTH_UI_THEME = "light"
 
-STORAGES = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+# STORAGES = {
+#     "staticfiles": {
+#         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+#     },
+# }
 STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
 WHITENOISE_MANIFEST_STRICT = False
 
