@@ -5,6 +5,7 @@ __pycache__/
 *$py.class
 .idea/
 crap.json
+local-cdn/
 # C extensions
 *.so
 # Distribution / packaging
