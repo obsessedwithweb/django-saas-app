@@ -38,6 +38,8 @@ ALLOWED_HOSTS = [
     '.railway.app'
 ]
 
+CSRF_COOKIE_DOMAIN = ALLOWED_HOSTS[0]
+
 if DEBUG:
     ALLOWED_HOSTS += [
         'localhost',
