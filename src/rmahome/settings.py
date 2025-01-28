@@ -38,16 +38,15 @@ ALLOWED_HOSTS = [
     'https://django-saas.up.railway.app/',
 ]
 
-CSRF_COOKIE_DOMAIN = ALLOWED_HOSTS[0]
+# CSRF_COOKIE_DOMAIN = [*ALLOWED_HOSTS]
 
 if DEBUG:
     ALLOWED_HOSTS += [
-        'localhost',
-        '127.0.0.1'
+        "127.0.0.1",
+        "localhost"
     ]
 
-CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS
-
+# CSRF_TRUSTED_ORIGINS = [*ALLOWED_HOSTS]
 # Application definition
 
 INSTALLED_APPS = [
