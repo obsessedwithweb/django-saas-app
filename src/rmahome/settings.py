@@ -116,7 +116,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-CONN_MAX_AGE = config('CONN_MAX_AGE',default=300, cast=int)
+# CONN_MAX_AGE = config('CONN_MAX_AGE',default=300, cast=int)
 # Add default=None if u want to run it locally
 DATABASE_URL = config('DATABASE_URL', default=None)
 
@@ -126,7 +126,7 @@ if DATABASE_URL is not None:
         'default': dj_database_url.config(
             default=DATABASE_URL,
             # HOW much the connection will last
-            conn_max_age=config(CONN_MAX_AGE),
+            # conn_max_age=config(CONN_MAX_AGE),
             conn_health_checks=True,
         )
     }
