@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div class="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8 text-center">
+      <svg class="mx-auto h-48 w-auto text-gray-400" viewBox="0 0 184 152" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(92 76) scale(0.8)" fill="none" fill-rule="evenodd">
+          <circle fill="#f00" cx="0" cy="0" r="50"/>
+            <path d="M-25,-25 L25,25 M-25,25 L25,-25" stroke="#fff" stroke-width="8" fill="none">
+            </path>
+          <text x="0" y="80" text-anchor="middle" fill="#4B5563" font-size="24">400</text>
+        </g>
+      </svg>
+      <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+        Bad Request
+      </h2>
+      <p class="mt-2 text-sm text-gray-600">
+        Oops! The request cannot be fulfilled due to bad syntax.
+      </p>
+      <div class="mt-5">
+        <a href="/" class="text-indigo-600 hover:text-indigo-500">
+          Return to homepage
+          <span aria-hidden="true"> &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
