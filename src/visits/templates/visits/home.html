@@ -1,13 +1,30 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static "/css/style.css" %}">
+<script src="{% static "/js/index.js" %}" defer></script>
+{% endblock css %}
 
 {% block content %}
-<section class="flex flex-col items-center justify-center ">
-    <h1 class="" >Before Adding, Welcome !</h1>
-    <ul>
-        {% for q in visits %}
-            <li>{{ q.timestamp }} => {{q.path}} </li>
-        {% endfor %}
-    </ul>
-    <span>{{auth}}</span>
-</section>
-{% endblock  %}
+<div class="stack-area containter">
+  <div class="left"></div>
+  <div class="right">
+    <div class="card num-1">
+      <h1 id="title">Welcome !</h1>
+      <span id="content">Lorem ipsum dolor sit amet.</span>
+    </div>
+    <div class="card num-2">
+      <h1 id="title">Welcome !</h1>
+      <span id="content">Lorem ipsum dolor sit amet.</span>
+    </div>
+    <div class="card num-3">
+      <h1 id="title">Welcome !</h1>
+      <span id="content">Lorem ipsum dolor sit amet.</span>
+    </div>
+    <div class="card num-4">
+      <h1 id="title">Welcome !</h1>
+      <span id="content">Lorem ipsum dolor sit amet.</span>
+    </div>
+  </div>
+</div>
+{% endblock %}

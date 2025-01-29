@@ -34,11 +34,20 @@ SECRET_KEY = config("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DJANGO_DEBUG", cast=bool)
 
+#  the cookie will be marked as “secure”, 
+# which means browsers may ensure that the cookie is only sent with an HTTPS connection.
+# try to run it only in deployement
+if not DEBUG:
+    CSRF_COOKIE_SECURE = True
+
+# if this is set to True, 
+# client-side JavaScript will not be able to access the CSRF cookie.
+# CSRF_COOKIE_HTTPONLY = True
+
 ALLOWED_HOSTS = [
     '.railway.app',
 ]
 
-# CSRF_COOKIE_DOMAIN = [*ALLOWED_HOSTS]
 
 if DEBUG:
     ALLOWED_HOSTS += [
@@ -46,14 +55,16 @@ if DEBUG:
         "localhost"
     ]
 
+# CSRF_COOKIE_DOMAIN = [*ALLOWED_HOSTS]
 # CSRF_TRUSTED_ORIGINS = [*ALLOWED_HOSTS]
 # CSRF_COOKIE_SECURE
 # Application definition
 
 INSTALLED_APPS = [
+    # ~ myApps
     'visits',
-    'authenticate',
     'commando',
+    'profiles',
     # ? 3rd party pckg allAuth
     "allauth_ui",
     'allauth',
